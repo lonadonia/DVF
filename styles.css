@@ -306,6 +306,10 @@ img { display: block; }
 .page[data-surface="dark"] .hero {
   background: radial-gradient(ellipse 130% 90% at 65% -10%, #1B2C5E 0%, #060C14 55%);
 }
+/* Light mode hero: vivid map-inspired background */
+.page:not([data-surface="dark"]) .hero {
+  background: linear-gradient(160deg, #162E68 0%, #0E2258 38%, #091A48 72%, #071440 100%);
+}
 .hero::after {
   content: "";
   position: absolute; inset: auto 0 -1px 0; height: 160px;
@@ -326,6 +330,30 @@ img { display: block; }
   mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 30%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 30%, transparent 80%);
   animation: gridDrift 40s linear infinite;
+}
+/* Light mode: brighter coordinate grid + distribution node dots */
+.page:not([data-surface="dark"]) .hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(120,180,255,.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,180,255,.22) 1px, transparent 1px),
+    radial-gradient(circle, rgba(160,215,255,.55) 1.5px, transparent 1.5px);
+  background-size: 52px 52px, 52px 52px, 52px 52px;
+  mask-image: radial-gradient(ellipse 105% 80% at 50% 35%, #000 20%, transparent 88%);
+  -webkit-mask-image: radial-gradient(ellipse 105% 80% at 50% 35%, #000 20%, transparent 88%);
+}
+/* Network city nodes — simulates a distribution map */
+.page:not([data-surface="dark"]) .hero-grid-bg::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(100,185,255,.95) 3.5px, rgba(100,185,255,.28) 8px, transparent 15px),
+    radial-gradient(circle, rgba(80,165,255,.90) 3px,   rgba(80,165,255,.22) 7px, transparent 12px),
+    radial-gradient(circle, rgba(130,205,255,.95) 4.5px, rgba(130,205,255,.30) 10px, transparent 18px),
+    radial-gradient(circle, rgba(90,175,255,.85) 2.5px,  rgba(90,175,255,.20) 6px,  transparent 11px),
+    radial-gradient(circle, rgba(115,195,255,.90) 3px,   rgba(115,195,255,.22) 7px, transparent 13px);
+  background-size: 100% 100%;
+  background-position: 11% 29%, 37% 68%, 66% 34%, 81% 74%, 54% 21%;
+  background-repeat: no-repeat;
 }
 @keyframes gridDrift {
   from { background-position: 0 0, 0 0; }
