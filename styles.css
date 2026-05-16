@@ -294,6 +294,38 @@ img { display: block; }
   box-shadow: 0 1px 3px rgba(13,17,23,.08);
 }
 
+/* Light mode navbar — always solid white */
+.page:not([data-surface="dark"]) .nav,
+.page:not([data-surface="dark"]) .nav.scrolled {
+  background: #ffffff;
+  border-bottom-color: var(--border-default);
+  box-shadow: var(--shadow-1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.page:not([data-surface="dark"]) .nav-links a { color: var(--fg-2); }
+.page:not([data-surface="dark"]) .nav-links a:hover { color: var(--fg-1); }
+.page:not([data-surface="dark"]) .lang {
+  background: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+.page:not([data-surface="dark"]) .lang button { color: var(--fg-2); }
+.page:not([data-surface="dark"]) .lang button.on {
+  background: var(--bg-page);
+  color: var(--fg-1);
+  box-shadow: 0 1px 3px rgba(13,17,23,.08);
+}
+.page:not([data-surface="dark"]) .theme-btn {
+  border-color: var(--border-default);
+  background: var(--bg-panel);
+  color: var(--fg-2);
+}
+.page:not([data-surface="dark"]) .theme-btn:hover {
+  background: var(--brand-050);
+  border-color: var(--brand-500);
+  color: var(--brand-500);
+}
+
 /* ===== Hero ===== */
 .hero {
   position: relative;
@@ -306,10 +338,32 @@ img { display: block; }
 .page[data-surface="dark"] .hero {
   background: radial-gradient(ellipse 130% 90% at 65% -10%, #1B2C5E 0%, #060C14 55%);
 }
-/* Light mode hero: deep navy base for the map */
+/* Light mode hero: white background, dark text */
 .page:not([data-surface="dark"]) .hero {
-  background: #0B1736;
+  background: #ffffff;
+  color: var(--fg-1);
 }
+.page:not([data-surface="dark"]) .hero h1 { color: var(--fg-1); }
+.page:not([data-surface="dark"]) .hero h1 .accent {
+  background: linear-gradient(95deg, var(--brand-600) 0%, var(--brand-500) 55%, var(--brand-400) 100%);
+}
+.page:not([data-surface="dark"]) .hero-sub { color: var(--fg-2); }
+.page:not([data-surface="dark"]) .hero-trust { color: var(--fg-2); }
+.page:not([data-surface="dark"]) .hero-trust .sep { color: var(--fg-3); }
+.page:not([data-surface="dark"]) .hero-trust b { color: var(--fg-1); }
+.page:not([data-surface="dark"]) .hero .btn--ghost-dark {
+  color: var(--fg-1);
+  border-color: var(--border-strong);
+  background: transparent;
+}
+.page:not([data-surface="dark"]) .hero .btn--ghost-dark:hover {
+  background: var(--bg-panel);
+  transform: translateY(-1px);
+}
+.page:not([data-surface="dark"]) .hero::after {
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #ffffff);
+}
+.page:not([data-surface="dark"]) .hero-trace { opacity: 0.3; }
 
 /* Map background — only visible in light/muted mode */
 .hero-map-bg {

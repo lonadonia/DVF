@@ -13,8 +13,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Hero is always dark — use the white logo until we scroll onto a light bg
-  const logoSrc = scrolled && !isDark ? '/assets/logo-light.png' : '/assets/logo-dark.png';
+  // White nav in light mode always needs the dark logo; dark mode always uses white logo
+  const logoSrc = isDark ? '/assets/logo-dark.png' : '/assets/logo-light.png';
 
   return (
     <nav className={'nav' + (scrolled ? ' scrolled' : '') + (isDark ? ' dark-mode' : '')}>
