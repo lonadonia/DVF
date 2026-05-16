@@ -11,12 +11,13 @@ export const I18N = {
       langLabel: "Jazyk",
     },
     hero: {
+      eyebrow: "Platforma pro správu ODZ",
       h1a: "Řídíte distribuční síť.",
       h1b: "My vám to usnadníme.",
       sub: "Moderní platforma pro správu ODZ — monitoring v reálném čase, GIS záznamy sítě, dispečink a integrace s měřidly.",
       cta1: "Přihlásit se",
       cta2: "Vyzkoušet demo",
-      trust1: "Používáno operátory distribuční sítě",
+      trust1: "Aktivní operátoři ODZ",
       trust2a: "GDPR",
       trust2b: "compliant",
       trust3a: "99,9 %",
@@ -98,7 +99,7 @@ export const I18N = {
   },
   en: {
     nav: { features: "Features", audience: "For whom", integrations: "Integrations", contact: "Contact", signin: "Sign in", langLabel: "Language" },
-    hero: { h1a: "You run a distribution grid.", h1b: "We make it manageable.", sub: "A modern platform for local distribution-network operations — real-time monitoring, GIS asset registry, dispatch and smart-metering integrations.", cta1: "Sign in", cta2: "Try the demo", trust1: "Used by distribution-network operators", trust2a: "GDPR", trust2b: "compliant", trust3a: "99.9%", trust3b: "uptime" },
+    hero: { eyebrow: "Platform for LDN operators", h1a: "You run a distribution grid.", h1b: "We make it manageable.", sub: "A modern platform for local distribution-network operations — real-time monitoring, GIS asset registry, dispatch and smart-metering integrations.", cta1: "Sign in", cta2: "Try the demo", trust1: "Active LDN operators", trust2a: "GDPR", trust2b: "compliant", trust3a: "99.9%", trust3b: "uptime" },
     logos: { caption: "Trusted by network operators across the Czech Republic" },
     features: {
       eyebrow: "Platform", h2: "Everything you need to run a network",

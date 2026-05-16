@@ -126,24 +126,44 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-grid-bg" aria-hidden="true"></div>
       <HeroMapBg />
+      <div className="hero-copy-scrim" aria-hidden="true"></div>
       <span className="hero-trace t1" aria-hidden="true"></span>
       <span className="hero-trace t2" aria-hidden="true"></span>
       <span className="hero-trace t3" aria-hidden="true"></span>
       <div className="container">
         <div className="hero-inner">
-          <div>
+          <div className="hero-copy">
+            <p className="hero-eyebrow">
+              <span className="hero-eyebrow-dot" aria-hidden="true"></span>
+              {t.hero.eyebrow}
+            </p>
             <h1>{t.hero.h1a} <span className="accent">{t.hero.h1b}</span></h1>
             <p className="hero-sub">{t.hero.sub}</p>
             <div className="hero-cta">
-              <a className="btn btn--primary btn--lg" href="https://main.ldsadmin.cz">{t.hero.cta1} <span aria-hidden="true">→</span></a>
-              <a className="btn btn--ghost-dark btn--lg" href="#contact">{t.hero.cta2}</a>
+              <a className="btn btn--primary btn--lg" href="https://main.ldsadmin.cz">
+                {t.hero.cta1}
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+              <a className="btn btn--ghost-dark btn--lg hero-demo-btn" href="#contact">
+                <span className="hero-demo-play" aria-hidden="true">
+                  <i data-lucide="play" aria-hidden="true"></i>
+                </span>
+                {t.hero.cta2}
+              </a>
             </div>
             <div className="hero-trust">
-              <span><span className="dot"></span> {t.hero.trust1}</span>
-              <span className="sep">·</span>
-              <span><b>{t.hero.trust2a}</b> {t.hero.trust2b}</span>
-              <span className="sep">·</span>
-              <span><b>{t.hero.trust3a}</b> {t.hero.trust3b}</span>
+              <span className="hero-trust-chip">
+                <span className="dot" aria-hidden="true"></span>
+                {t.hero.trust1}
+              </span>
+              <span className="hero-trust-chip">
+                <i data-lucide="shield-check" aria-hidden="true"></i>
+                <b>{t.hero.trust2a}</b>&nbsp;{t.hero.trust2b}
+              </span>
+              <span className="hero-trust-chip">
+                <i data-lucide="activity" aria-hidden="true"></i>
+                <b>{t.hero.trust3a}</b>&nbsp;{t.hero.trust3b}
+              </span>
             </div>
           </div>
           <div className="hero-mock-wrap">
