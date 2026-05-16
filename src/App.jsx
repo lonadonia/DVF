@@ -32,8 +32,12 @@ class ErrorBoundary extends React.Component {
 
 export default function App() {
   const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  const setLang = React.useCallback(v => setTweak('lang', v), [setTweak]);
-  const langValue = React.useMemo(() => ({ lang: tweaks.lang, setLang }), [tweaks.lang, setLang]);
+  const setLang     = React.useCallback(v => setTweak('lang', v),    [setTweak]);
+  const setSurface  = React.useCallback(v => setTweak('surface', v), [setTweak]);
+  const langValue   = React.useMemo(() => ({
+    lang: tweaks.lang, setLang,
+    surface: tweaks.surface, setSurface,
+  }), [tweaks.lang, setLang, tweaks.surface, setSurface]);
 
   return (
     <ErrorBoundary>
